@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.microservice</groupId>
-    <artifactId>estoquepreco</artifactId>
+    <artifactId>stockprice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>estoquepreco</name>
-    <description>estoquepreco</description>
+    <name>stockprice</name>
+    <description>stockprice</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -32,7 +32,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-rabbit</artifactId>
