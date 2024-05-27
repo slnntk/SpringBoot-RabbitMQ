@@ -2,24 +2,20 @@ package com.microservice.stockprice.connections;
 
 import com.microservice.stockprice.constants.RabbitMQConstants;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.DirectExchange;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 import org.springframework.amqp.core.Queue;
+import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class RabbitMQQConnection {
 
     private static final String EXCHANGE_NAME = "amq.direct";
 
     private final AmqpAdmin amqpAdmin;
-
-    public RabbitMQQConnection(AmqpAdmin amqpAdmin) {
-        this.amqpAdmin = amqpAdmin;
-    }
-
 
     private Queue createQueue(String queueName) {
         return new Queue(queueName, true, false, false);
